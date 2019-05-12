@@ -94,7 +94,7 @@ class ScheduleCommand extends Command
         foreach ($jobSchedulers as $name => $scheduler) {
             $lastRunAt = $jobsLastRunAt[$name];
 
-            if ( ! $scheduler->shouldSchedule($name, $lastRunAt)) {
+            if ( ! $scheduler->shouldSchedule($lastRunAt)) {
                 continue;
             }
 
