@@ -18,7 +18,7 @@ interface JobScheduler
      *
      * @return boolean
      */
-    public function shouldSchedule($command, \DateTime $lastRunAt);
+    public function shouldSchedule(\DateTime $lastRunAt);
 
     /**
      * Creates the given command when it is scheduled.
