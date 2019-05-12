@@ -13,12 +13,12 @@ interface CronCommand
      *
      * @return Job
      */
-    public function createCronJob(\DateTime $lastRunAt): Job;
+    public function createCronJob(\DateTime $lastRunAt);
 
     /**
      * Returns whether this command should be scheduled.
      *
      * @return boolean
      */
-    public function shouldBeScheduled(\DateTime $lastRunAt): bool;
+    public function shouldBeScheduled(\DateTime $lastRunAt);
 }
